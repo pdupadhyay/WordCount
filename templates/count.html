@@ -1,0 +1,14 @@
+<h1>There are total {{totalwords}} words in your text.</h1>
+<br>
+<h1>There are {{ count }} unique words in your text</h1>
+
+<a href = "{% url 'home' %}"> Start Again</a>
+
+<h1>Full Text:</h1>
+{{ fulltext }}
+
+<h1> Your dictionary: </h1>
+{% for word, counttotal in sortedlist %}
+{{ word }}: {{counttotal}}
+<br>
+{% endfor %}
